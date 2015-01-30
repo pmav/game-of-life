@@ -1,0 +1,157 @@
+/**
+* Game of Life - JS & CSS
+* http://pmav.eu
+*/
+
+body {
+  font-family: "Verdana", sans-serif;
+  font-size: 14px;
+  color: #000000;
+}
+
+a {
+  color: blue;
+}
+
+h4 {
+  border-bottom: 1px solid #BBBBBB;
+  margin-bottom: 4px;
+  margin-top: 30px;
+}
+
+abbr {
+  border-bottom: 1px dotted #000000;
+  cursor: help;
+}
+
+.cl {
+  line-height: 0;
+  clear: both;
+}
+
+#hint {
+  background: #FFFF66;
+  padding: 6px 10px;
+  float: right;
+}
+
+#wrapper {
+  margin: auto;
+  width: 902px;
+}
+
+#title {
+  font: bold 46px/40px "Helvetica", "Arial", sans-serif;
+  background: #BBBBBB;
+  letter-spacing: -2px;
+  margin: 0 0 10px 0;
+  padding: 6px 6px 8px;
+}
+
+#title a {
+  text-decoration: none;
+  color: #222;
+}
+
+/* ################################### */
+
+canvas {
+  border: 0;
+ padding: 0;
+ margin: 0;
+}
+
+/* ################################### */
+
+.box {
+  margin: 0 0 26px 0;
+  font: 12px "Verdana", sans-serif;
+}
+
+.box .subtitle {
+  font: bold 16px "Helvetica", "Arial", sans-serif;
+  background: #BBB;
+  letter-spacing: -1px;
+  margin: 0 0 8px 0;
+  color: #222;
+  padding: 2px 4px 1px 4px;
+  clear: both;
+}
+
+.box .info {
+  margin: 4px 0;
+}
+
+.button {
+  border-bottom: 2px solid #333333;
+  border-right: 2px solid #333333;
+  border-top: 2px solid #AAAAAA;
+  border-left: 2px solid #AAAAAA;
+  background: #FFFFFF;
+  font-size: 24px;
+  line-height: 26px;
+  padding: 2px 6px 5px 6px;
+  margin: 0 10px 0 0;
+  float: left;
+}
+
+.button a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.button:hover {
+  border-bottom: 2px solid #AAAAAA;
+  border-right: 2px solid #AAAAAA;
+  border-top: 2px solid #333333;
+  border-left: 2px solid #333333;
+  cursor: pointer;
+}
+
+.box input {
+  border-bottom: 2px solid #333333;
+  border-right: 2px solid #333333;
+  border-top: 2px solid #AAAAAA;
+  border-left: 2px solid #AAAAAA;
+  background: #FFFFFF;
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.box input:hover {
+  border-bottom: 2px solid #AAAAAA;
+  border-right: 2px solid #AAAAAA;
+  border-top: 2px solid #333333;
+  border-left: 2px solid #333333;
+  cursor: pointer;
+}
+
+.box #exportUrl {
+  font-size: 24px;
+  display: none;
+}
+
+.box #exportUrl a {
+  border-bottom: 2px solid #AAAAAA;
+  text-decoration: none;
+  color: #000000;
+}
+
+.box.layout span {
+  display: inline;
+  font-size: 20px;
+  padding: 0 0 0 10px;
+}
+
+#footer {
+  background: #DDDDDD;
+  color: #222222;
+  font-size: 12px;
+  padding: 6px;
+}
+
+#footer a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #222222;
+}
