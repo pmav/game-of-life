@@ -360,10 +360,11 @@
 
       // Flow Control
       if (GOL.running) {
-        //window.requestAnimationFrame(GOL.nextStep);
-        setTimeout(function() {
-          GOL.nextStep();
-        }, this.waitTime);
+        window.requestAnimationFrame(GOL.nextStep);
+        // TODO honour a waitTime ?
+        //setTimeout(function() {
+        //  GOL.nextStep();
+        //}, this.waitTime);
       } else {
         if (GOL.clear.schedule) {
           GOL.cleanUp();
