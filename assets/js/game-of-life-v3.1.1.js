@@ -8,6 +8,19 @@
 
 (function () {
 
+  var stats = new Stats();
+  stats.setMode( 0 ); // 0 FPS, 1 MS
+
+  // align top-left
+  stats.domElement.style.position = 'absolute';
+  stats.domElement.style.right = '0px';
+  stats.domElement.style.bottom = '0px';
+  stats.domElement.style.zIndex = '999999';
+
+  document.addEventListener("DOMContentLoaded", function() {
+    document.body.appendChild( stats.domElement );
+  });
+
   var GOL = {
 
     columns : 0,
@@ -360,11 +373,15 @@
 
       // Flow Control
       if (GOL.running) {
+        stats.begin();
         window.requestAnimationFrame(GOL.nextStep);
+        stats.end();
         // TODO honour a waitTime ?
         //setTimeout(function() {
+        //  stats.begin();
         //  GOL.nextStep();
-        //}, this.waitTime);
+        //  stats.end();
+        //}, GOL.waitTime);
       } else {
         if (GOL.clear.schedule) {
           GOL.cleanUp();
