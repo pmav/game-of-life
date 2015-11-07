@@ -645,7 +645,7 @@
         this.canvas.setAttribute('width', this.width);
 
         this.height = this.height + (this.cellSpace * GOL.rows) + (this.cellSize * GOL.rows);
-        this.canvas.getAttribute('height', this.height);
+        this.canvas.setAttribute('height', this.height);
 
         // Fill background
         this.context.fillStyle = GOL.grid.schemes[GOL.grid.current].color;
