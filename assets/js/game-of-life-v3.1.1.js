@@ -373,15 +373,14 @@
 
       // Flow Control
       if (GOL.running) {
-        stats.begin();
-        window.requestAnimationFrame(GOL.nextStep);
-        stats.end();
-        // TODO honour a waitTime ?
-        //setTimeout(function() {
-        //  stats.begin();
-        //  GOL.nextStep();
-        //  stats.end();
-        //}, GOL.waitTime);
+        function animateFrame() {
+          stats.begin();
+          window.requestAnimationFrame(GOL.nextStep);
+          stats.end();
+        }
+
+        if (GOL.waitTime > 0) setTimeout(function() { animateFrame() }, GOL.waitTime);
+        else animateFrame();
       } else {
         if (GOL.clear.schedule) {
           GOL.cleanUp();
